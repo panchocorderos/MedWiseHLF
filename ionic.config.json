@@ -1,0 +1,7 @@
+{
+  "name": "MedWise-HLF",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

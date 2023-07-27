@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="assets/images/logo.png" alt="hospital-logo">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center ion-no-margin ion-margin-top">
+        <p class="ion-no-margin">PORTAL PACIENTE</p>
+      </ion-row>
+      <ion-row class="ion-justify-content-center ion-no-margin ion-margin-bottom">
+        <h2 class="ion-no-margin">INICIA SESIÓN</h2>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="10">
+          <ion-item>
+            <ion-label position="floating">RUN</ion-label>
+            <ion-input formControlName="run" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="10">
+          <ion-button type="submit" color="primary" expand="block">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="10">
+          <ion-button [routerLink]="['/']" color="primary" expand="block" fill="clear">Volver</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <ion-alert [isOpen]="loginAlert" header="Error" subHeader="Error al ingresar" message="Usuario o Contraseña incorrectos."
+    (didDismiss)="setOpen(false)">
+  </ion-alert>
+
+</ion-content>

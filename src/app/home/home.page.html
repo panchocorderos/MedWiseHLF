@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <img src="assets/images/logo.png" alt="hospital-logo">
+    </ion-title>
+    <ion-buttons class="ion-margin-end" slot="end">
+      <ion-button [routerLink]="['/login']" expand="block" fill="solid" color="primary">MI PORTAL PACIENTE</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <h2>Conoce nuestra app</h2>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="9">
+        <iframe width="100%" height="300px" src="https://www.youtube.com/embed/raZN5fgCeQs" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="9">
+        <ion-button [routerLink]="['/login']" expand="block" fill="solid" color="primary">MI PORTAL
+          PACIENTE</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
